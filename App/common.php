@@ -14,3 +14,5 @@ require 'environment.php';
 require 'models/Client.php';
 require 'models/Site.php';
 require 'models/Turbine.php';
+require 'models/Sensor.php';
+
