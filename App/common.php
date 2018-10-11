@@ -11,4 +11,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'
 require 'environment.php';
 
 /** MODELS **/
-require 'models/Turbine.php';
+require 'models/Client.php';
