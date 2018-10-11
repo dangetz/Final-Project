@@ -30,7 +30,7 @@ class Turbine {
 
     // 4. Handle the results
     $arr = [];
-    while ($row = $statement->fetch(PDO:FETCH_ASSOC)) {
+    while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
       $theClient = new Client($row);
       array_push($arr, $theClient);
     }
