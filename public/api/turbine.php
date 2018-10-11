@@ -3,7 +3,7 @@
 require '../../App/common.php';
 
 // 1. Go to database and get all clients
-$turbines = Site::fetchTurbine();
+$turbines = Turbine::fetchTurbine();
 
 // 2. Convert to JSON
 $json = json_encode($turbines, JSON_PRETTY_PRINT);
