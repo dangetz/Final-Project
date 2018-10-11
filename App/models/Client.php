@@ -36,7 +36,7 @@ class Client {
     }
 
     return $arr;
-  },
+  }
   public static function create()
   {
     //1. Talks to DB
