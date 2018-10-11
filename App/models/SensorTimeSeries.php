@@ -40,8 +40,8 @@ class SensorTimeSeries {
     // 4. Handle the results
     $arr = [];
     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-      $theSite = new SensorTimeSeries($row);
-      array_push($arr, $theSite);
+      $theSensorTimeSeries = new SensorTimeSeries($row);
+      array_push($arr, $theSensorTimeSeries);
     }
 
     return $arr;
