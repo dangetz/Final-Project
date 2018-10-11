@@ -13,7 +13,7 @@ class Site {
   public $addrCity;
   public $addrState;
   public $addrZip;
-  public $addrCountry;
+//  public $addrCountry;
 
   public function __construct($data) {
     $this ->siteId = $data['siteId'];
@@ -28,7 +28,7 @@ class Site {
     $this ->addrCity = $data['addrCity'];
     $this ->addrState = $data['addrState'];
     $this ->addrZip = $data['addrZip'];
-    $this ->addrCountry = $data['addrCountry'];
+  //  $this ->addrCountry = $data['addrCountry'];
   }
 
   public static function fetchSite() {
