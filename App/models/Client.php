@@ -37,4 +37,24 @@ class Client {
 
     return $arr;
   }
+  public static function create()
+  {
+    //1. Talks to DB
+    $db = new PDO(DB_SERVER, DB_USER, DB_PW);
+    //2. Prepares insert query
+    $sql = 'INSERT INTO client (clientId, clientName, clientDescription, gicsSector, gicsSubIndustry, headquarters)
+      VALUES (?, ?, ?, ?, ?, ?)';
+      $statement = $db->prepare($sql);
+
+    // 3. Run the query
+    $success = $statement->execute([
+      $this ->clientId,
+      $this ->clientName,
+      $this ->clientDescription,
+      $this ->gicsSector,
+      $this ->gicsSubIndustry,
+      $this ->headquarters,
+    ]);
+        
+  }
 }
