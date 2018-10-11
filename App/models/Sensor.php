@@ -1,6 +1,6 @@
 <?php
 
-class Client {
+class Sensor {
   public $sensorId;
   public $sensorName;
   public $sensorDescription;
