@@ -3,10 +3,10 @@
 require '../../App/common.php';
 
 // 1. Go to database and get all clients
-$clients = Client::fetchClient();
+$sites = Site::fetchSite();
 
 // 2. Convert to JSON
-$json = json_encode($clients, JSON_PRETTY_PRINT);
+$json = json_encode($sites, JSON_PRETTY_PRINT);
 
 // 3. Print
 header('Content-Type: application/json');

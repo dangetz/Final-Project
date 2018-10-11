@@ -12,3 +12,4 @@ require 'environment.php';
 
 /** MODELS **/
 require 'models/Client.php';
+require 'models/Site.php';
