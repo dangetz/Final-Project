@@ -36,7 +36,7 @@ class Client {
     }
 
     return $arr;
-  }
+  },
   public static function create()
   {
     //1. Talks to DB
@@ -55,6 +55,6 @@ class Client {
       $this ->gicsSubIndustry,
       $this ->headquarters,
     ]);
-        
+
   }
 }
