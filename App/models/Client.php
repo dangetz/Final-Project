@@ -48,7 +48,7 @@ class Client {
 
     // 3. Run the query
     $success = $statement->execute([
-      $this ->clientId,
+      $this->clientId,
       $this ->clientName,
       $this ->clientDescription,
       $this ->gicsSector,
