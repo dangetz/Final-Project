@@ -37,7 +37,7 @@ class Client {
 
     return $arr;
   }
-  public static function create()
+  public function create()
   {
     //1. Talks to DB
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
