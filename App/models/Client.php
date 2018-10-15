@@ -9,7 +9,7 @@ class Client {
   public $headquarters;
 
   public function __construct($data) {
-    $this ->clientId = $data['clientId'];
+    $this ->clientId = isset($data['clientId']) ? intval ($data['clientId']) :null;
     $this ->clientName = $data['clientName'];
     $this ->clientDescription = $data['clientDescription'];
     $this ->gicsSector = $data['gicsSector'];
@@ -36,5 +36,25 @@ class Client {
     }
 
     return $arr;
+  }
+  public function create()
+  {
+    //1. Talks to DB
+    $db = new PDO(DB_SERVER, DB_USER, DB_PW);
+    //2. Prepares insert query
+    $sql = 'INSERT INTO client (clientId, clientName, clientDescription, gicsSector, gicsSubIndustry, headquarters)
+      VALUES (?, ?, ?, ?, ?, ?)';
+      $statement = $db->prepare($sql);
+
+    // 3. Run the query
+    $success = $statement->execute([
+      $this->clientId,
+      $this ->clientName,
+      $this ->clientDescription,
+      $this ->gicsSector,
+      $this ->gicsSubIndustry,
+      $this ->headquarters,
+    ]);
+
   }
 }
