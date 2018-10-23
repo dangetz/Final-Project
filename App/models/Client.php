@@ -55,6 +55,5 @@ class Client {
       $this ->gicsSubIndustry,
       $this ->headquarters,
     ]);
-
   }
 }
