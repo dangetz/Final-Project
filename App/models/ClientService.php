@@ -8,7 +8,7 @@ class ClientService
   public function __construct($data) {
     $this->commentId = isset($data['commentId']) ? intval($data['commentId']) : null;
     $this->client = $data['client'];
-    $this->notes = $data['notes']
+    $this->notes = $data['notes'];
   }
 
   public function create() {
