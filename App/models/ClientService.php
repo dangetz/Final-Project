@@ -40,4 +40,20 @@ class ClientService
       }
       return $arr;
     }
+    public function createService()
+    {
+      //1. Talks to DB
+      $db = new PDO(DB_SERVER, DB_USER, DB_PW);
+      //2. Prepares insert query
+      $sql = 'INSERT INTO clientService (commentId, client, notes)
+        VALUES (?, ?, ?)';
+        $statement = $db->prepare($sql);
+
+      // 3. Run the query
+      $success = $statement->execute([
+        $this->commentId,
+        $this ->client,
+        $this ->notes
+      ]);
+    }
 }

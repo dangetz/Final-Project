@@ -1,4 +1,4 @@
 <?php
 $client = new ClientService($_POST);
-$clientService-> create();
+$clientService-> createService();
 echo json_encode($clientService);
