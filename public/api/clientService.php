@@ -2,6 +2,11 @@
 
 require '../../App/common.php';
 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  require 'clientServicePost.php';
+  exit;
+}
+
 // 1. Go to database and get all clients
 $clientService = ClientService::fetchComments();
 
