@@ -3,7 +3,7 @@ class ClientService
 {
   public $commentId;
   public $client;
-  public $notes
+  public $notes;
 
   public function __construct($data) {
     $this->commentId = isset($data['commentId']) ? intval($data['commentId']) : null;
