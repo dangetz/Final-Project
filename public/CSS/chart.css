@@ -1,4 +1,4 @@
-html {
+main {
   background-image: url("../Images/turbines.gif");
   background-position: center;
   background-repeat: no-repeat;
@@ -21,7 +21,14 @@ nav {
   border-style: solid;
   background-color: powderblue;
 }
-
+header {
+  border-style: solid;
+  background-color: powderblue;
+}
+footer {
+  border-style: solid;
+  background-color: powderblue;
+}
 .pull-left {
   float: left !important;
 }
