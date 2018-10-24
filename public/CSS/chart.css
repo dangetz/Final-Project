@@ -1,0 +1,20 @@
+body {
+  background-image: url("../Images/turbines.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1.a {
+  text-align: center;
+}
+
+.top_label {
+  background-color: silver;
+  border: 1px solid black;
+  top: 20px;
+}
+
+nav {
+  border-style: solid;
+}

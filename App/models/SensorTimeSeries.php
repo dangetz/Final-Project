@@ -2,7 +2,7 @@
 
 class SensorTimeSeries {
   public $sensorDeployedId;
-  public $dataCollected;
+  public $dataCollectedDate;
   public $output;
   public $heatRate;
   public $compressorEfficiency;
@@ -15,7 +15,7 @@ class SensorTimeSeries {
 
   public function __construct($data) {
     $this ->sensorDeployedId = $data['sensorDeployedId'];
-    $this ->dataCollected = $data['dataCollected'];
+    $this ->dataCollectedDate = $data['dataCollectedDate'];
     $this ->output = $data['output'];
     $this ->heatRate = $data['heatRate'];
     $this ->compressorEfficiency = $data['compressorEfficiency'];

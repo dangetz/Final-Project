@@ -3,15 +3,15 @@
 require '../../App/common.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-  require 'clientPost.php';
+  require 'clientServicePost.php';
   exit;
 }
 
 // 1. Go to database and get all clients
-$clients = Client::fetchClient();
+$clientService = ClientService::fetchComments();
 
 // 2. Convert to JSON
-$json = json_encode($clients, JSON_PRETTY_PRINT);
+$json = json_encode($clientService, JSON_PRETTY_PRINT);
 
 // 3. Print
 header('Content-Type: application/json');
