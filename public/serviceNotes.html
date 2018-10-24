@@ -57,6 +57,16 @@
 <!-- development version, includes helpful console warnings -->
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="js/clientService.app.js"></script>
+
+<!-- tablesort script -->
+<script src="tablesort.min.js"></script>
+<!-- Include sort types you need -->
+<script src="tablesort.number.js"></script>
+<script src="tablesort.date.js"></script>
+
+<script>
+  new Tablesort(document.getElementById('notesTable'));
+</script>
   </body>
 
   </html>
