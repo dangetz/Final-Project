@@ -19,7 +19,7 @@ var clientServiceApp = new Vue({
         body: s
       })
       .then( response => response.json() )
-      .then( json => {this.comment.push(json)})
+      .then( json => {this.clientService.push(json)})
       .catch( err => {
         console.error('POST ERROR:');
         console.error(err);
