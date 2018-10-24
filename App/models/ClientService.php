@@ -28,7 +28,7 @@ class ClientService
     $this->notes = $data['notes'];
   }
 
-  public function create() {
+  public function createService() {
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
     $sql = 'INSERT INTO clientService (clientName, notes) VALUES (?, ?)';
 
