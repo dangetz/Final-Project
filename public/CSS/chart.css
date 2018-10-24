@@ -5,10 +5,16 @@ body {
   background-size: cover;
 }
 
-img {
-  opacity: 0.5;
-}
-
 h1.a {
   text-align: center;
+}
+
+.top_label {
+  background-color: silver;
+  border: 1px solid black;
+  top: 20px;
+}
+
+nav {
+  border-style: solid;
 }
