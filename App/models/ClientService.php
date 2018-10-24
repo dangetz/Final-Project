@@ -2,13 +2,13 @@
 class ClientService
 {
   public $commentId;
-  public $client;
-  public $notes
+  public $clientName;
+  public $notes;
 
   public function __construct($data) {
     $this->commentId = isset($data['commentId']) ? intval($data['commentId']) : null;
-    $this->client = $data['client'];
-    $this->notes = $data['notes']
+    $this->clientName = isset($data['clientName']) ? strval($data['clientName']) : null;
+    $this->notes = $data['notes'];
   }
 
   public function create() {
@@ -39,5 +39,21 @@ class ClientService
         array_push($arr, $commentText);
       }
       return $arr;
+    }
+    public function createService()
+    {
+      //1. Talks to DB
+      $db = new PDO(DB_SERVER, DB_USER, DB_PW);
+      //2. Prepares insert query
+      $sql = 'INSERT INTO clientService (commentId, clientName, notes)
+        VALUES (?, ?, ?)';
+        $statement = $db->prepare($sql);
+
+      // 3. Run the query
+      $success = $statement->execute([
+        $this->commentId,
+        $this ->clientName,
+        $this ->notes
+      ]);
     }
 }
