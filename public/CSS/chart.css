@@ -1,8 +1,10 @@
-body {
+html {
   background-image: url("../Images/turbines.gif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 h1.a {
@@ -17,7 +19,7 @@ h1.a {
 
 nav {
   border-style: solid;
-  background-color: grey;
+  background-color: powderblue;
 }
 
 .pull-left {
