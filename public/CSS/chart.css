@@ -1,0 +1,16 @@
+
+body {
+  background-image: url("../Images/turbines.gif");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+img {
+  opacity: 0.5;
+}
+
+h1.a {
+  text-align: center;
+}
