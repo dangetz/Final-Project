@@ -17,4 +17,13 @@ h1.a {
 
 nav {
   border-style: solid;
+  background-color: grey;
+}
+
+.pull-left {
+  float: left !important;
+}
+
+.nav-item {
+  padding-right: 30px;
 }
