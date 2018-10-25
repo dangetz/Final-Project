@@ -42,7 +42,7 @@ var siteApp = new Vue({
 
     console.log('IS THIS BEING CALLED');
 
-    fetch('api/client.php')
+    fetch('api/site.php')
     .then( response => response.json() )
     .then( json => {siteApp.site = json} )
     .catch( err => {
