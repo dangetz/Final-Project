@@ -38,7 +38,7 @@ var siteApp = new Vue({
 
   created() {
 
-    this.siteForm = this.getEmptySiteForm();
+    this.siteForm = this.getEmptySitesForm();
 
     console.log('IS THIS BEING CALLED');
 
