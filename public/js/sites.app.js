@@ -25,7 +25,7 @@ var siteApp = new Vue({
         console.error(err);
       })
 
-      this.siteForm = this.getEmptyClientForm();
+      this.siteForm = this.getEmptySitesForm();
     },
 
     getEmptySitesForm() {
