@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="CSS/chart.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+    <link rel="icon" href="https://www.ags.org.uk/content/uploads/2018/01/AGS_logo_short.png">
 
     <title>Project Dashboard</title>
   </head>
@@ -41,14 +41,64 @@
           </ul>
         </div>
       </nav>
-			<main>
+      <main  class="container-fluid">
+      <br>
+      <h1 style="color: white">Site Information</h1>
+
+
+<div id="siteVue">
+        <table id="notesTable2" class="col-12 table table-striped table-sm">
+          <tr>
+            <thead>
+            <th role="columnheader">Site ID</th>
+            <th role="columnheader">Client ID</th>
+            <th role="columnheader">Site</th>
+            <th role="columnheader">Description</th>
+            <th role="columnheader">Contact</th>
+            <th role="columnheader">Capacity</th>
+            <th role="columnheader">Commercial Date</th>
+            <th role="columnheader">Address Line 1</th>
+            <th role="columnheader">Address Line 2</th>
+            <th role="columnheader">City</th>
+            <th role="columnheader">State</th>
+            <th role="columnheader">Zip</th>
+            <th role="columnheader">Country</th>
+          </thead>
+
+          </tr>
+          <tbody id="notesTableBody2" v-for="c in site"
+          :id="c.sitetId"
+          :key="c.siteId">
+          <tr>
+            <td>{{c.siteId}}</td>
+            <td>{{c.clientId}}</td>
+            <td>{{c.siteName}}</td>
+            <td>{{c.siteDescription}}</td>
+            <td>{{c.primaryContact}}</td>
+            <td>{{c.capacity}}</td>
+            <td>{{c.commercialDate}}</td>
+            <td>{{c.addrLine1}}</td>
+            <td>{{c.addrLine1}}</td>
+            <td>{{c.addrCity}}</td>
+            <td>{{c.addrState}}</td>
+            <td>{{c.addrZip}}</td>
+            <td>{{c.addrCountry}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
 
 
 
 		</main>
-      <!-- Optional JavaScript -->
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- moment.js via CDN-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
 
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- Optional JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="js/sites.app.js"></script>
 			<footer>
       Kelley School of Business - MSIS Program, 2018
     </footer>

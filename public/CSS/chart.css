@@ -64,8 +64,32 @@ th[aria-sort]:not(.no-sort):after {
 	visibility: visible;
 	opacity: 0.4;
 }
-
 th[role=columnheader]:not(.no-sort):hover:after {
 	visibility: visible;
 	opacity: 1;
 }
+table, td, th {
+            border: solid 3px black;
+            border-collapse: collapse
+        }
+        td{
+            padding: 4px;
+        }
+        table{
+            width: 100%;
+
+        }
+        th{
+            text-align: left;
+        }
+        thead, tfoot{
+            background-color: grey;
+            color: white
+
+        }
+        tbody{
+          background-color: rgba(255,255,255,0.55)
+        }
+        tbody>tr:hover{
+            background-color: lightpink;
+        }

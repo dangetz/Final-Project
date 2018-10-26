@@ -28,7 +28,7 @@ class Site {
     $this ->addrCity = $data['addrCity'];
     $this ->addrState = $data['addrState'];
     $this ->addrZip = $data['addrZip'];
-    $this ->addrCountry = $data['addrCountry'];
+    $this ->addrCountry = $data['addrCounty'];
   }
 
   public static function fetchSite() {
