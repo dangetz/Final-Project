@@ -63,16 +63,16 @@
           </tbody>
         </table>
 
-        <h3> Enter Service Record Here</h3>
+        <h3 style="color: white"> Enter Service Record Here</h3>
         <form id="newCommentForm"  @submit.prevent="handleCommentForm">
                           <div class="form-group row">
-                            <label for="clientService" class="col-sm-1 col-form-label">Client: </label>
+                            <label for="clientService" class="col-sm-1 col-form-label" style="color: white">Client: </label>
                             <div class="col-sm-3">
                               <input type="text" id="client" v-model="commentForm.clientName" class="form-control" required>
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label for="clientService" class="col-sm-1 col-form-label">Notes: </label>
+                            <label for="clientService" class="col-sm-1 col-form-label" style="color: white">Notes: </label>
                             <div class="col-sm-3">
                               <input type="text" id="notes" v-model="commentForm.notes" class="form-control" required>
                             </div>
