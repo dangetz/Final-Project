@@ -13,7 +13,7 @@ var turbinesApp = new Vue({
 
     fetch('api/turbineDeployed.php')
     .then( response => response.json() )
-    .then( json => {turbinesApp.site = json} )
+    .then( json => {turbinesApp.turbines = json} )
     .catch( err => {
       console.log('ERROR WITH FETCH');
       console.log(err);
