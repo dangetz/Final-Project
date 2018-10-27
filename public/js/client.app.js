@@ -8,28 +8,6 @@ var clientApp = new Vue({
   },
 
   methods: {
-    handleClientForm(e) {
-      e.preventDefault();
-
-      const s = JSON.stringify(this.clientForm);
-
-      fetch('api/client.php', {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json; charset=utf-8"
-        },
-        body: s
-      })
-      .then( response => response.json() )
-      .then( json => {this.client.push(json)})
-      .catch( err => {
-        console.error('POST ERROR:');
-        console.error(err);
-      })
-
-      this.clientForm = this.getEmptyClientForm();
-    },
-
     handleCommentForm(e) {
       e.preventDefault();
 
@@ -52,11 +30,6 @@ var clientApp = new Vue({
       this.commentForm = this.getEmptyCommentForm();
     },
 
-    getEmptyClientForm() {
-      return {
-        comment: null
-        }
-      },
     getEmptyCommentForm() {
       return {
         comment: null
