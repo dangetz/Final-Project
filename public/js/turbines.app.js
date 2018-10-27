@@ -18,5 +18,10 @@ var turbinesApp = new Vue({
       console.log('ERROR WITH FETCH');
       console.log(err);
     })
+  },
+  methods: {
+  goToMetrics(tid) {
+    window.location ='metrics.html?siteId=' + tid;
   }
+}
 })

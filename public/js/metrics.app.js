@@ -19,10 +19,6 @@ var metricsApp = new Vue({
       console.log(err);
     })
   },
-  methods: {
-  goToMetrics(tid){
-    window.location ='metrics.html?siteId=' + tid;
-  }
-}
+  
   }
 )
