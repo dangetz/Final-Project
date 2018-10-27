@@ -3,6 +3,8 @@ var clientApp = new Vue({
   data: {
     client: [ ],
     clientForm: { },
+    clientService: [ ],
+    commentForm: { }
   },
 
   methods: {
