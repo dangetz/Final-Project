@@ -62,8 +62,8 @@
 
           </tr>
           <tbody id="notesTableBody2" v-for="c in turbines"
-          :id="c.turbineDeployedId"
-          :key="c.turbineDeployedId">
+            :key="c.siteId"
+            :id="'site- ' + c.siteId " >
           <tr>
             <td>{{c.turbineDeployedId}}</td>
             <td>{{c.turbineId}}</td>
