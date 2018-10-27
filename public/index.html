@@ -44,6 +44,37 @@
       </nav>
       <main id="clientServiceVue" class="container-fluid">
 
+
+        <div id="clientVue">
+                <table id="notesTable2" class="col-12 table table-striped table-sm">
+                  <tr>
+                    <thead>
+                    <th role="columnheader">Client ID</th>
+                    <th role="columnheader">Client Name</th>
+                    <th role="columnheader">Client Description</th>
+                    <th role="columnheader">GICS Sector</th>
+                    <th role="columnheader">GICS Sub-Industry </th>
+                    <th role="columnheader">Headquarters</th>
+                    </thead>
+
+                  </tr>
+                  <tbody id="notesTableBody2" v-for="c in client"
+                  :key="c.clientId"
+                  :id="c.clientId">
+                  <tr>
+                    <td>{{c.clientId}}</td>
+                    <td>{{c.clientName}}</td>
+                    <td>{{c.clientDescription}}</td>
+                    <td>{{c.gicsSector}}</td>
+                    <td>{{c.gicsSubIndustry}}</td>
+                    <td>{{c.headquarters}}</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+
+
+
         <table id="notesTable" class="table table-striped table-sm">
           <tr>
             <thead>
@@ -92,6 +123,7 @@
       <!-- Optional JavaScript -->
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
       <script src="js/clientService.app.js"></script>
+      <script src="js/client.app.js"></script>
       <script src="js/tablesort.min.js"></script>
       <script> new Tablesort(document.getElementById('notesTable'));</script>
 			<footer>
