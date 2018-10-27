@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="CSS/chart.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="icon" href="https://www.ags.org.uk/content/uploads/2018/01/AGS_logo_short.png">
+
+  <title>Project Dashboard</title>
+</head>
+
+<body>
+  <header class="row">
+    <div class="col-xs-10">
+      <img src="https://www.ags.org.uk/content/uploads/2018/01/AGS_logo_short.png" alt="Myself" height="90">
+    </div>
+  </header>
+  <nav class="navbar navbar-custom navbar-expand-md">
+    <div class="container-fluid test">
+      <div class="navbar-header">
+        <a class="navbar-brand">Navigation Bar</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#"></a></li>
+        <li class="nav-item"><a href="index.html"> Main Page </a></li>
+        <li class="nav-item"><a href="aboutUs.html"> About Us </a></li>
+        <li class="dropdown nav-item">
+          <a class="dropdown-toggle" href="" data-toggle="dropdown">Contact <span class="caret"> </span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="">Email</a></li>
+            <li><a href="">Phone List</a></li>
+            <li><a href="">Live Chat</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="sites.html"> Sites </a></li>
+      </ul>
+    </div>
+  </nav>
+  <main id="clientServiceVue" class="container-fluid">
+    <br>
+    <h1 style="color: white">Turbine Information</h1>
+
+    <table id="notesTable" class="table table-striped table-sm">
+      <tr>
+        <thead>
+          <th role="columnheader">Comment ID</th>
+          <th role="columnheader">Client</th>
+          <th role="columnheader">Notes</th>
+        </thead>
+
+      </tr>
+      <tbody id="notesTableBody" v-for="c in clientService" :id="c.commentId" :key="c.commentId">
+        <tr>
+          <td>{{c.commentId}}</td>
+          <td>{{c.clientName}}</td>
+          <td>{{c.notes}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="color: white"> Enter Service Record Here</h3>
+    <form id="newCommentForm" @submit.prevent="handleCommentForm">
+      <div class="form-group row">
+        <label for="clientService" class="col-sm-1 col-form-label" style="color: white">Client: </label>
+        <div class="col-sm-3">
+          <input type="text" id="client" v-model="commentForm.clientName" class="form-control" required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="clientService" class="col-sm-1 col-form-label" style="color: white">Notes: </label>
+        <div class="col-sm-3">
+          <input type="text" id="notes" v-model="commentForm.notes" class="form-control" required>
+        </div>
+
+      </div>
+
+      <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+      <button id="submitNewComment" type="submit" class="btn btn-primary" onclick="window.location.reload()">Save changes</button>
+    </form>
+
+  </main>
+  <!-- moment.js via CDN-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <!-- Optional JavaScript -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="js/clientService.app.js"></script>
+  <footer>
+    Kelley School of Business - MSIS Program, 2018
+  </footer>
+</body>
+
+</html>
