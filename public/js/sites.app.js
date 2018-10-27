@@ -25,8 +25,8 @@ var siteApp = new Vue({
     this.siteId = siteId;
 
     fetch('api/siteSpecific.php?siteId='+siteId)
-    .then( response=> response.json() )
-    .then(json=>{
+    .then( response => response.json() )
+    .then(json => {
       siteApp.siteView = json;
       siteApp.showSite = true;
     })

@@ -40,7 +40,7 @@ class SiteSpecific {
     $statement = $db->prepare($sql);
 
     // 3. Run the query
-    $success = $statement->execute(\
+    $success = $statement->execute(
         [$siteId]
     );
 
