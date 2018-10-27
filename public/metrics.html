@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="icon" href="https://www.ags.org.uk/content/uploads/2018/01/AGS_logo_short.png">
 
-    <title>KPI's and Timeseries Data</title>
+    <title>Project Dashboard</title>
   </head>
     <body>
 			<header class="row">
@@ -43,47 +43,50 @@
       </nav>
       <main  class="container-fluid">
       <br>
-      <h1 style="color: white">Site Metrics</h1>
+      <h1 style="color: white">Turbine Information</h1>
 
-
-<div id="metricsVue">
+<div id="turbinesVue">
         <table id="notesTable2" class="col-12 table table-striped table-sm">
           <tr>
             <thead>
+            <th role="columnheader">Turbine Deployed ID</th>
             <th role="columnheader">Turbine ID</th>
-            <th role="columnheader">Capacity</th>
-            <th role="columnheader">Ramp Up Time</th>
-            <th role="columnheader">Maintenance Interval</th>
-            <th role="columnheader">Total Starts</th>
+            <th role="columnheader">Site ID</th>
+            <th role="columnheader">Serial Number</th>
+            <th role="columnheader">Deployed Date</th>
             <th role="columnheader">Total Fired Hours</th>
-
+            <th role="columnheader">Total Starts</th>
+            <th role="columnheader">Last Planned Outage Date</th>
+            <th role="columnheader">Last Unplanned Outage Date</th>
           </thead>
 
           </tr>
-          <tbody id="notesTableBody2" v-for="c in metrics">
+          <tbody id="notesTableBody2" v-for="c in turbines"
+          :id="c.turbineDeployedId"
+          :key="c.turbineDeployedId">
           <tr>
+            <td>{{c.turbineDeployedId}}</td>
             <td>{{c.turbineId}}</td>
-            <td>{{c.capacity}}</td>
-            <td>{{c.rampUpTime}}</td>
-            <td>{{c.maintenanceInterval}}</td>
-            <td>{{c.totalStarts}}</td>
+            <td>{{c.siteId}}</td>
+            <td>{{c.serialNumber}}</td>
+            <td>{{c.deployedDate}}</td>
             <td>{{c.totalFiredHours}}</td>
+            <td>{{c.totalStarts}}</td>
+            <td>{{c.lastPlannedOutageDate}}</td>
+            <td>{{c.lastUnplannedOutageDate}}</td>
           </tr>
           </tbody>
         </table>
       </div>
 
-
-
 		</main>
     <!-- moment.js via CDN-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-
   <!-- development version, includes helpful console warnings -->
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <!-- Optional JavaScript -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="js/metrics.app.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="js/turbines.app.js"></script>
 			<footer>
       Kelley School of Business - MSIS Program, 2018
     </footer>
