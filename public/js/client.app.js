@@ -38,7 +38,7 @@ var clientApp = new Vue({
 
   created() {
 
-    this.clientForm = this.getEmptyClientForm();
+    //this.clientForm = this.getEmptyClientForm();
 
     console.log('IS THIS BEING CALLED');
 
