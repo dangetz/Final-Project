@@ -2,7 +2,7 @@ var clientApp = new Vue({
   el: '#clientVue',
   data: {
     client: [ ],
-    clienttForm: { },
+    clientForm: { },
   },
 
   methods: {
