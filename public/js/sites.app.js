@@ -19,7 +19,9 @@ var siteApp = new Vue({
       console.log(err);
     })
   },
+  methods: {
   goToSite(sid){
     window.location ='turbinesDeployed.html?siteId=' + sid;
   }
-})
+}}
+)
