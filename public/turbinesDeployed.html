@@ -62,8 +62,9 @@
 
           </tr>
           <tbody id="notesTableBody2" v-for="c in turbines"
-            :key="c.siteId"
-            :id="'site- ' + c.site " >
+            :key="c.turbineDeployedId"
+            :id="'turbineId- ' + c.turbineDeployedId"
+            @click="goToMetrics(c.turbineDeployedId)"> <!-- make go to metrics object-->
           <tr>
             <td>{{c.turbineDeployedId}}</td>
             <td>{{c.turbineId}}</td>
