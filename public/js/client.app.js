@@ -2,16 +2,18 @@ var clientApp = new Vue({
   el: '#clientVue',
   data: {
     client: [ ],
-    clienttForm: { },
+    clientForm: { },
+    clientService: [ ],
+    commentForm: { }
   },
 
   methods: {
-    handleClientForm(e) {
+    handleCommentForm(e) {
       e.preventDefault();
 
-      const s = JSON.stringify(this.clientForm);
+      const s = JSON.stringify(this.commentForm);
 
-      fetch('api/client.php', {
+      fetch('api/clientService.php', {
         method: "POST",
         headers: {
             "Content-Type": "application/json; charset=utf-8"
@@ -19,26 +21,26 @@ var clientApp = new Vue({
         body: s
       })
       .then( response => response.json() )
-      .then( json => {this.client.push(json)})
+      .then( json => {this.clientService.push(json)})
       .catch( err => {
         console.error('POST ERROR:');
         console.error(err);
       })
 
-      this.clientForm = this.getEmptyClientForm();
+      this.commentForm = this.getEmptyCommentForm();
     },
 
-    getEmptyClientForm() {
+    getEmptyCommentForm() {
       return {
         comment: null
         }
-      },
+      }
     },
 
 
   created() {
 
-    this.clientForm = this.getEmptyClientForm();
+    this.clientForm = this.getEmptyCommentForm();
 
     console.log('IS THIS BEING CALLED');
 
