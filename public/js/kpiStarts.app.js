@@ -8,7 +8,7 @@ var kpiStartsApp = new Vue({
 
   methods:{
     fetchSensorTime (turbineDeployedId){
-      fetch('api/sensorTime.php?turbineDeployedId='+turbineDeployedId)
+      fetch('api/metrics.php?turbineDeployedId='+turbineDeployedId)
       .then( response => response.json() )
       .then( json => {
         kpiStartsApp.sensorTime = json;
