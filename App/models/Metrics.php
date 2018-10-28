@@ -35,16 +35,18 @@ class Metrics {
     $this ->starts = $data['starts'];
   }
 
-  public static function fetchMetrics() {
+  public static function fetchMetrics(int $turbineDeployedId) {
     // 1. Connect to database
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
 
     // 2. Prepare the query
-    $sql = 'SELECT * FROM turbineKpis';
+    $sql = 'SELECT * FROM turbineKpis WHERE turbineDeployedId=?';
     $statement = $db->prepare($sql);
 
     // 3. Run the query
-    $success = $statement->execute();
+    $success = $statement->execute(
+      [$turbineId]
+    );
 
     // 4. Handle the results
     $arr = [];
