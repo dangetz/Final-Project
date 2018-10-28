@@ -45,7 +45,7 @@ class Metrics {
 
     // 3. Run the query
     $success = $statement->execute(
-      [$turbineId]
+      [$turbineDeployedId]
     );
 
     // 4. Handle the results
