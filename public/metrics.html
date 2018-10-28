@@ -47,19 +47,25 @@
       <br>
       <h1 style="color: white">Turbine Information</h1>
 
-<div id="turbinesVue">
+<div id="metricsVue">
         <table id="notesTable2" class="col-12 table table-striped table-sm">
           <tr>
             <thead>
             <th role="columnheader">Turbine Deployed ID</th>
-            <th role="columnheader">Turbine ID</th>
-            <th role="columnheader">Site ID</th>
-            <th role="columnheader">Serial Number</th>
-            <th role="columnheader">Deployed Date</th>
-            <th role="columnheader">Total Fired Hours</th>
-            <th role="columnheader">Total Starts</th>
-            <th role="columnheader">Last Planned Outage Date</th>
-            <th role="columnheader">Last Unplanned Outage Date</th>
+            <th role="columnheader">Turbine Name</th>
+            <th role="columnheader">Turbine Serial Number</th>
+            <th role="columnheader">Sensor Name</th>
+            <th role="columnheader">Sensor Serial Number</th>
+            <th role="columnheader">Sensor Deployed ID</th>
+            <th role="columnheader">Data Collected Date</th>
+            <th role="columnheader">Output</th>
+            <th role="columnheader">Heatrate</th>
+            <th role="columnheader">Compressor Efficiency</th>
+            <th role="columnheader">Availability</th>
+            <th role="columnheader">Reliability</th>
+            <th role="columnheader">Fired Hours</th>
+            <th role="columnheader">Trips</th>
+            <th role="columnheader">Starts</th>
           </thead>
 
           </tr>
@@ -68,14 +74,20 @@
           :key="c.turbineDeployedId">
           <tr>
             <td>{{c.turbineDeployedId}}</td>
-            <td>{{c.turbineId}}</td>
-            <td>{{c.siteId}}</td>
-            <td>{{c.serialNumber}}</td>
-            <td>{{c.deployedDate}}</td>
-            <td>{{c.totalFiredHours}}</td>
-            <td>{{c.totalStarts}}</td>
-            <td>{{c.lastPlannedOutageDate}}</td>
-            <td>{{c.lastUnplannedOutageDate}}</td>
+            <td>{{c.turbineName}}</td>
+            <td>{{c.turbineSerialNumber}}</td>
+            <td>{{c.sensorName}}</td>
+            <td>{{c.sensorSerialNumber}}</td>
+            <td>{{c.sensorDeployedId}}</td>
+            <td>{{c.dataCollectedDate}}</td>
+            <td>{{c.output}}</td>
+            <td>{{c.heatRate}}</td>
+            <td>{{c.compressorEfficiency}}</td>
+            <td>{{c.availability}}</td>
+            <td>{{c.reliability}}</td>
+            <td>{{c.firedHours}}</td>
+            <td>{{c.trips}}</td>
+            <td>{{c.starts}}</td>
           </tr>
           </tbody>
         </table>
