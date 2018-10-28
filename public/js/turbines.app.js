@@ -11,7 +11,7 @@ var turbinesApp = new Vue({
 
     const url = new URL(window.location.href);
     console.log(url);
-    const siteId = url.searchParams.get('clientId');
+    const siteId = url.searchParams.get('siteId');
     console.log('Site: ' + siteId);
     this.siteId = siteId;
 
