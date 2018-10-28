@@ -23,9 +23,13 @@ var turbinesApp = new Vue({
       console.log(err);
     })
   },
+
   methods: {
-  goToMetrics(tid) {
-    window.location ='metrics.html?turbineDeployedId=' + tid;
-  }
+    selectSite(sid) {
+      window.location = 'site.html?siteId=' + sid;
+    },
+    selectTurbine(tid) {
+      window.location = 'kpi.html?turbineDeployedId=' + tid;
+    }
 }
 })
