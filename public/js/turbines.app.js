@@ -11,11 +11,11 @@ var turbinesApp = new Vue({
 
     const url = new URL(window.location.href);
     console.log(url);
-    const siteId = url.searchParams.get('siteId');
-    console.log('Site: ' + siteId);
-    this.siteId = siteId;
+    const turbineDeployedId = url.searchParams.get('turbineDeployedId');
+    console.log('Site: ' + turbineDeployedId);
+    this.siteId = turbineDeployedId;
 
-    fetch('api/turbineDeployed.php?siteId=' + siteId)
+    fetch('api/turbineDeployed.php?siteId=' + turbineDeployedId)
     .then( response => response.json() )
     .then( json => {turbinesApp.turbines = json} )
     .catch( err => {
