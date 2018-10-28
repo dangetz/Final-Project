@@ -11,5 +11,5 @@ $turbines = TurbineDeployed::fetchTurbineDeployed($siteId);
 $json = json_encode($turbines, JSON_PRETTY_PRINT);
 
 // 3. Print
-header('Content-Type: application/json');
+header('Content-Type: application/json'); 
 echo $json;
