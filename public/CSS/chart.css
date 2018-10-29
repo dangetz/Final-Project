@@ -7,6 +7,10 @@ main {
   min-height: 100%;
 }
 
+main.graph {
+  background-color: white;
+}
+
 h1.a {
   text-align: center;
 }
