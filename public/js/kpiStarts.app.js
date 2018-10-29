@@ -13,7 +13,6 @@ var kpiStartsApp = new Vue({
       .then( json => {
         kpiStartsApp.sensorTime = json;
         kpiStartsApp.formatSensorTime();
-        kpiStartsApp.buildStartsChart();
       } )
       .catch( err => {
         console.log('Time Series Get ERROR:');
@@ -27,7 +26,8 @@ var kpiStartsApp = new Vue({
           entry.starts = parseFloat(entry.starts);
           entry.dateCollected = Date.parse(entry.dataCollectedDate);
         }
-      )
+      );
+      kpiStartsApp.buildStartsChart();
     },
     buildStartsChart() {
       Highcharts.chart('startsChart', {
@@ -79,7 +79,7 @@ var kpiStartsApp = new Vue({
               type: 'area',
               name: 'Output/Date',
               data: kpiApp.sensorTime.map( entry=>
-                [entry.dataCollectedDate, entry.starts]
+                [entry.dateCollected, entry.starts]
               )
           }]
       });
