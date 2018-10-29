@@ -3,6 +3,7 @@
 require '../../App/common.php';
 $siteId = intval($_GET['siteId'] ?? 0);
 
+
 // 1. Go to database and get all clients
 $turbines = TurbineDeployed::fetchTurbineDeployed($siteId);
 
