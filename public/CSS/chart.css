@@ -121,4 +121,5 @@ a.button {
 p{
   color: white;
   text-shadow: 1px 1px black;
+  padding: 5px;
 }
