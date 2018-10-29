@@ -43,7 +43,6 @@
     <table id="notesTable" class="table table-striped table-sm">
       <tr>
         <thead>
-          <th role="columnheader">Comment ID</th>
           <th role="columnheader">Client</th>
           <th role="columnheader">Notes</th>
         </thead>
@@ -51,7 +50,6 @@
       </tr>
       <tbody id="notesTableBody" v-for="c in clientService" :id="c.commentId" :key="c.commentId">
         <tr>
-          <td>{{c.commentId}}</td>
           <td>{{c.clientName}}</td>
           <td>{{c.notes}}</td>
         </tr>
