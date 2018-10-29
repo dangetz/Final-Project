@@ -5,7 +5,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="CSS/chart.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -47,35 +46,47 @@
       <br>
       <h1 style="color: white">Turbine Information</h1>
 
-<div id="turbinesVue">
+<div id="metricsVue">
         <table id="notesTable2" class="col-12 table table-striped table-sm">
           <tr>
             <thead>
             <th role="columnheader">Turbine Deployed ID</th>
-            <th role="columnheader">Turbine ID</th>
-            <th role="columnheader">Site ID</th>
-            <th role="columnheader">Serial Number</th>
-            <th role="columnheader">Deployed Date</th>
-            <th role="columnheader">Total Fired Hours</th>
-            <th role="columnheader">Total Starts</th>
-            <th role="columnheader">Last Planned Outage Date</th>
-            <th role="columnheader">Last Unplanned Outage Date</th>
+            <th role="columnheader">Turbine Name</th>
+            <th role="columnheader">Turbine Serial Number</th>
+            <th role="columnheader">Sensor Name</th>
+            <th role="columnheader">Sensor Serial Number</th>
+            <th role="columnheader">Sensor Deployed ID</th>
+            <th role="columnheader">Data Collected Date</th>
+            <th role="columnheader">Output</th>
+            <th role="columnheader">Heatrate</th>
+            <th role="columnheader">Compressor Efficiency</th>
+            <th role="columnheader">Availability</th>
+            <th role="columnheader">Reliability</th>
+            <th role="columnheader">Fired Hours</th>
+            <th role="columnheader">Trips</th>
+            <th role="columnheader">Starts</th>
           </thead>
 
           </tr>
-          <tbody id="notesTableBody2" v-for="c in turbines"
+          <tbody id="notesTableBody2" v-for="c in metrics"
           :id="c.turbineDeployedId"
           :key="c.turbineDeployedId">
           <tr>
             <td>{{c.turbineDeployedId}}</td>
-            <td>{{c.turbineId}}</td>
-            <td>{{c.siteId}}</td>
-            <td>{{c.serialNumber}}</td>
-            <td>{{c.deployedDate}}</td>
-            <td>{{c.totalFiredHours}}</td>
-            <td>{{c.totalStarts}}</td>
-            <td>{{c.lastPlannedOutageDate}}</td>
-            <td>{{c.lastUnplannedOutageDate}}</td>
+            <td>{{c.turbineName}}</td>
+            <td>{{c.turbineSerialNumber}}</td>
+            <td>{{c.sensorName}}</td>
+            <td>{{c.sensorSerialNumber}}</td>
+            <td>{{c.sensorDeployedId}}</td>
+            <td>{{c.dataCollectedDate}}</td>
+            <td>{{c.output}}</td>
+            <td>{{c.heatRate}}</td>
+            <td>{{c.compressorEfficiency}}</td>
+            <td>{{c.availability}}</td>
+            <td>{{c.reliability}}</td>
+            <td>{{c.firedHours}}</td>
+            <td>{{c.trips}}</td>
+            <td>{{c.starts}}</td>
           </tr>
           </tbody>
         </table>
@@ -88,7 +99,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <!-- Optional JavaScript -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="js/turbines.app.js"></script>
+    <script src="js/metrics.app.js"></script>
 			<footer>
       Kelley School of Business - MSIS Program, 2018
     </footer>

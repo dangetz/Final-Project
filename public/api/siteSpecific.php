@@ -2,13 +2,13 @@
 
 require '../../App/common.php';
 
-$turbineDeployedId = intval($_GET['turbineDeployedId'] ?? 0);
-
+$siteId = intval($_GET['siteId'] ?? 0);
 // 1. Go to database and get all clients
-$metrics = Metrics::fetchMetrics($turbineDeployedId);
+
+$sites = SiteSpecific::fetchSite($siteId); //pass in value from above
 
 // 2. Convert to JSON
-$json = json_encode($metrics, JSON_PRETTY_PRINT);
+$json = json_encode($sites, JSON_PRETTY_PRINT);
 
 // 3. Print
 header('Content-Type: application/json');

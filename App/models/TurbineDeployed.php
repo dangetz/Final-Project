@@ -23,16 +23,18 @@ class TurbineDeployed {
     $this ->lastUnplannedOutageDate = $data['lastUnplannedOutageDate'];
   }
 
-  public static function fetchTurbineDeployed() {
+  public static function fetchTurbineDeployed(int $siteId) {
     // 1. Connect to database
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
 
     // 2. Prepare the query
-    $sql = 'SELECT * FROM turbineDeployed';
+    $sql = 'SELECT * FROM turbineDeployed WHERE siteId=?';
     $statement = $db->prepare($sql);
 
     // 3. Run the query
-    $success = $statement->execute();
+    $success = $statement->execute(
+      [$siteId]
+    );
 
     // 4. Handle the results
     $arr = [];

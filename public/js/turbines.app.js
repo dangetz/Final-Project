@@ -9,9 +9,13 @@ var turbinesApp = new Vue({
 
   created() {
 
+    const url = new URL(window.location.href);
+    console.log(url);
+    const siteId = url.searchParams.get('siteId');
+    console.log('Site: ' + siteId);
+    this.siteId = siteId;
 
-
-    fetch('api/turbineDeployed.php')
+    fetch('api/turbineDeployed.php?siteId=' + siteId)
     .then( response => response.json() )
     .then( json => {turbinesApp.turbines = json} )
     .catch( err => {
@@ -19,9 +23,13 @@ var turbinesApp = new Vue({
       console.log(err);
     })
   },
+
   methods: {
-  goToMetrics(tid) {
-    window.location ='metrics.html?siteId=' + tid;
-  }
+    selectSite(sid) {
+      window.location = 'site.html?siteId=' + sid;
+    },
+    selectTurbine(tid) {
+      window.location = 'kpi.html?turbineDeployedId=' + tid;
+    }
 }
 })
