@@ -32,6 +32,7 @@ header {
 footer {
   border-style: solid;
   background-color: powderblue;
+  padding-top: 10px;
 }
 .pull-left {
   float: left !important;
