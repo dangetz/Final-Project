@@ -79,7 +79,7 @@ var kpiStartsApp = new Vue({
               type: 'area',
               name: 'Output/Date',
               data: kpiApp.sensorTime.map( entry=>
-                [entry.dateCollected, entry.starts]
+                [entry.dataCollectedDate, entry.starts]
               )
           }]
       });
