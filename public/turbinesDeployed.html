@@ -42,9 +42,6 @@
         <table id="notesTable2" class="col-12 table table-striped table-sm">
           <tr>
             <thead>
-            <th role="columnheader">Turbine Deployed ID</th>
-            <th role="columnheader">Turbine ID</th>
-            <th role="columnheader">Site ID</th>
             <th role="columnheader">Serial Number</th>
             <th role="columnheader">Deployed Date</th>
             <th role="columnheader">Total Fired Hours</th>
@@ -59,9 +56,6 @@
             :id="'turbineId- ' + c.turbineDeployedId"
             @click="goToMetrics(c.turbineDeployedId)"> <!-- make go to metrics object-->
           <tr>
-            <td>{{c.turbineDeployedId}}</td>
-            <td>{{c.turbineId}}</td>
-            <td>{{c.siteId}}</td>
             <td>{{c.serialNumber}}</td>
             <td>{{c.deployedDate}}</td>
             <td>{{c.totalFiredHours}}</td>
