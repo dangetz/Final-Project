@@ -43,8 +43,6 @@
         <table id="notesTable2" class="col-12 table table-striped table-sm">
           <tr>
             <thead>
-            <th role="columnheader">Site ID</th>
-            <th role="columnheader">Client ID</th>
             <th role="columnheader">Site</th>
             <th role="columnheader">Description</th>
             <th role="columnheader">Contact</th>
@@ -64,8 +62,6 @@
           :id="'site- ' + c.siteId"
           @click="goToSite(c.siteId)">
           <tr>
-            <td>{{c.siteId}}</td>
-            <td>{{c.clientId}}</td>
             <td>{{c.siteName}}</td>
             <td>{{c.siteDescription}}</td>
             <td>{{c.primaryContact}}</td>
