@@ -24,7 +24,7 @@ var kpiStartsApp = new Vue({
     formatSensorTime(){
       this.sensorTime.forEach(
         (entry, index, arr) => {
-          entry.starts = Number(entry.starts);
+          entry.starts = parseInt(entry.starts);
           entry.dateCollected = Date.parse(entry.dataCollectedDate);
         }
       )
