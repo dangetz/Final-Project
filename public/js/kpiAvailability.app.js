@@ -45,7 +45,7 @@ var kpiAvailabilityApp = new Vue({
         tooltip: {
           enabled:true,
           formatter: function () {
-            return 'Avability rate is ' + this.y + ' on date ' + this.x.parseDate;
+            return 'Avability rate is ' + this.y + ' on date ' + this.x;
           },
         },
         series: [
@@ -53,7 +53,7 @@ var kpiAvailabilityApp = new Vue({
             type: 'scatter',
             name: 'Observations',
             data: kpiAvailabilityApp.sensorTime.map( entry=>
-              [entry.dateCollected, entry.availability]
+              [entry.datatCollectedDate, entry.availability]
             ),
             marker: {
                 radius: 4
