@@ -13,7 +13,7 @@ var sensorApp = new Vue({
 
     fetch('api/turbineKpis.php')
     .then( response => response.json() )
-    .then( json => {sensorApp.metrics = json} )
+    .then( json => {sensorApp.sensorData = json} )
     .catch( err => {
       console.log('ERROR WITH FETCH');
       console.log(err);
