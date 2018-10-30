@@ -39,7 +39,7 @@ var kpiApp = new Vue({
                zoomType: 'x'
            },
            title: {
-               text: 'Output over Time'
+               text: ''
            },
            xAxis: {
                type: 'datetime'
