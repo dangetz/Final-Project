@@ -45,11 +45,7 @@ var kpiAvailabilityApp = new Vue({
         tooltip: {
           enabled:true,
           formatter: function () {
-<<<<<<< HEAD
-            return 'Avability rate is ' + this.y;
-=======
-            return 'Avability rate is ' + this.y + ' on date ' + this.x;
->>>>>>> f515fad15fa4403150dd0664de89c5337e252c12
+            return 'Avability rate is ' + this.y + ' ';
           },
         },
         series: [
