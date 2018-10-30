@@ -62,7 +62,7 @@ var kpiHeatApp = new Vue({
    tooltip: {
      enabled: true,
      formatter: function () {
-       return 'Value is ' + this.y + 'at heat rate' + this.x;
+       return 'Output is ' + this.y + ' at heat rate ' + this.x;
      },
    },
    plotOptions: {
