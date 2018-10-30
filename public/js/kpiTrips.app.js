@@ -34,7 +34,7 @@ var kpiTripsApp = new Vue({
   buildTripsChart() {
     Highcharts.chart('tripsChart', {
         chart: {
-          type: 'bar',
+          type: 'pie',
             zoomType: 'x'
         },
         title: {
