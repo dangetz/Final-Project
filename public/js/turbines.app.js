@@ -5,7 +5,14 @@ var turbinesApp = new Vue({
 
   },
 
-
+  methods: {
+    selectSite(sid) {
+      window.location = 'site.html?siteId=' + sid;
+    },
+    selectTurbine(tid) {
+      window.location = 'kpi.html?turbineDeployedId=' + tid;
+    }
+  },
 
   created() {
 
@@ -22,14 +29,5 @@ var turbinesApp = new Vue({
       console.log('ERROR WITH FETCH');
       console.log(err);
     })
-  },
-
-  methods: {
-    selectSite(sid) {
-      window.location = 'site.html?siteId=' + sid;
-    },
-    selectTurbine(tid) {
-      window.location = 'kpi.html?turbineDeployedId=' + tid;
-    }
 }
 })

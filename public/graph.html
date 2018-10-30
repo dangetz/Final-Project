@@ -5,119 +5,86 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<!--bootstrap CSS -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="css/style.css">
-		<title> KPI </title>
+		<link rel="stylesheet" href="CSS/chart.css">
+    <link rel="icon" href="https://www.ags.org.uk/content/uploads/2018/01/AGS_logo_short.png">
+		<title> KPI Information </title>
 	</head>
 	<body class="first">
-		<header>
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-					<div class="navbar-nav">
-						<a class="nav-item nav-link" href="client.html">Clients</a>
-						<a class="nav-item nav-link" href="turbines.html">Turbines</a>
-						<a class="nav-item nav-link" href="site.html">Sites</a>
-					</div>
-				</div>
-			</nav>
-		</header>
-		<div class="container">
-
-			<main>
-				<div class="row">
-	          <img src="img/turbines.jpg" alt="turbine image" width="1500px">
-	      </div>
-				<br />
-				<h1>Key Performance Indicators</h1>
-				<br />
-
-					<!-- <div class="col placeholder"> -->
-					<div  id="kpiMain">
-						<h4>Output</h4>
-						<div id="outputChart" class="col">
-						</div>
-					</div>
-
-					<div  id="kpiHeat">
-						<h4>Heat Rate</h4>
-						<div id="heatChart" class="col">
-						</div>
-					</div>
-
-					<div  id="kpiCompressor">
-						<h4>Compressor Efficiency</h4>
-						<div id="compressorChart" class="col">
-						</div>
-					</div>
-
-					<div  id="kpiAvailability">
-						<h4>Availability</h4>
-						<div id="availabilityChart" class="col">
-						</div>
-					</div>
-
-					<div  id="kpiReliability">
-						<h4>Reliability</h4>
-						<div id="reliabilityChart" class="col">
-						</div>
-					</div>
-
-					<div  id="kpiHours">
-						<h4>Fired Hours</h4>
-						<div id="hoursChart" class="col">
-						</div>
-					</div>
-
-					<div  id="kpiTrips">
-						<h4>Trips</h4>
-						<div id="tripsChart" class="col">
-						</div>
-					</div>
-
-					<div  id="kpiStarts">
-						<h4>Starts</h4>
-						<div id="startsChart" class="col">
-						</div>
-					</div>
-
-					<!-- </div> -->
-					<!-- <div class="row place">
-					<section class="col place">
-						<div class="row">
-							<div class="col placeholder">
-								<h4>Heart Rate</h4>
+    <header class="col">
+          <div class="col-xs-10">
+        <img src="https://www.ags.org.uk/content/uploads/2018/01/AGS_logo_short.png" alt="Myself" height = "90">
+      </div>
+      </header>
+    <nav class="navbar navbar-custom navbar-expand-md">
+      <div class="container-fluid test">
+        <div class="navbar-header">
+          <a class="navbar-brand">Navigation Bar</a>
+        </div>
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#"></a></li>
+					<li class="nav-item"><a href="index.html"> Main Page </a></li>
+					<li class="nav-item"><a href="clientNotes.html"> Client Notes </a></li>
+					<li class="nav-item"><a href="sites.html"> Sites </a></li>
+					<li class="nav-item"><a href="sensorTimeSeries.html"> All Sensor Data </a></li>
+					<li class="nav-item"><a href="aboutUs.html"> About Us </a></li>
+					<li class="nav-item"><a href="contact.html">Contact</a></li>
+				</ul>
+      </div>
+    </nav>
+		<div class="container-fluid">
+					<br />
+					<h1>Key Performance Indicators</h1>
+					<br />
+			<div class="row">
+						<!-- <div class="col placeholder"> -->
+						<div id="kpiMain" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+							<h4>Output</h4>
+							<div id="outputChart">
 							</div>
 						</div>
-					</section>
-					<div class="col placeholder">
-						<h4>Compressor Efficiency</h4>
-						<div>Data</div>
-					</div>
-				</div> -->
 
-		<!--end row 1, high-level summary information-->
-			<!-- <div class="row">
-				<section class="col placeholder">
-					<h4>Availability</h4>
-					<div>Data</div>
-				</section>
-				<div class="col placeholder" >
-					<h4>Fired Hours</h4>
-					<div>Data</div>
-				</div>
-				<div class="col placeholder">
-					<h4>Trips</h4>
-					<div>Data</div>
-				</div>
+						<div  id="kpiHeat" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+							<h4>Heat Rate</h4>
+							<div id="heatChart">
+							</div>
+						</div>
+
+						<div id="kpiCompressor" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+							<h4>Compressor Efficiency</h4>
+							<div id="compressorChart">
+							</div>
+						</div>
+
+						<div  id="kpiAvailability" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+							<h4>Availability</h4>
+							<div id="availabilityChart">
+							</div>
+						</div>
+
+						<div  id="kpiReliability" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+							<h4>Reliability</h4>
+							<div id="reliabilityChart">
+							</div>
+						</div>
+
+						<div  id="kpiHours" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+							<h4>Fired Hours</h4>
+							<div id="hoursChart">
+							</div>
+						</div>
+
+						<div  id="kpiTrips" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+							<h4>Trips</h4>
+							<div id="tripsChart">
+							</div>
+						</div>
+
+						<div  id="kpiStarts" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+							<h4>Starts</h4>
+							<div id="startsChart">
+							</div>
+						</div>
 			</div>
-			<div class="col placeholder">
-				<h4>Starts</h4>
-				<div>Data</div>
-			</div> -->
-
-		</main>
 	</div>
 
 	<!-- higcharts -->
@@ -131,7 +98,7 @@
 	<!-- development version, includes helpful console warnings -->
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-	<script src="js/kpi.apps.js"></script>
+	<script src="js/kpi.app.js"></script>
 	<script src="js/kpiHeat.app.js"></script>
 	<script src="js/kpiCompressor.app.js"></script>
 	<script src="js/kpiAvailability.app.js"></script>
@@ -139,5 +106,8 @@
 	<script src="js/kpiHours.app.js"></script>
 	<script src="js/kpiTrips.app.js"></script>
 	<script src="js/kpiStarts.app.js"></script>
+  <footer>
+  Kelley School of Business - MSIS Program, 2018
+</footer>
 </body>
 </html>

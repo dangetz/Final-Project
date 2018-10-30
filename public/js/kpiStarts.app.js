@@ -13,7 +13,6 @@ var kpiStartsApp = new Vue({
       .then( json => {
         kpiStartsApp.sensorTime = json;
         kpiStartsApp.formatSensorTime();
-        kpiStartsApp.buildStartsChart();
       } )
       .catch( err => {
         console.log('Time Series Get ERROR:');
@@ -24,10 +23,11 @@ var kpiStartsApp = new Vue({
     formatSensorTime(){
       this.sensorTime.forEach(
         (entry, index, arr) => {
-          entry.starts = Number(entry.starts);
+          entry.starts = parseFloat(entry.starts);
           entry.dateCollected = Date.parse(entry.dataCollectedDate);
         }
-      )
+      );
+      kpiStartsApp.buildStartsChart();
     },
     buildStartsChart() {
       Highcharts.chart('startsChart', {
@@ -35,7 +35,7 @@ var kpiStartsApp = new Vue({
               zoomType: 'x'
           },
           title: {
-              text: 'Output over Time'
+              text: ''
           },
           xAxis: {
               type: 'datetime'

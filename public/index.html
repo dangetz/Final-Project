@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,13 +13,13 @@
     <title>Project Dashboard</title>
   </head>
     <body>
-			<header class="row">
-            <div class="col-xs-10">
+			<header class="col">
+            <div class="col-xs-12">
           <img src="https://www.ags.org.uk/content/uploads/2018/01/AGS_logo_short.png" alt="Myself" height = "90">
         </div>
         </header>
       <nav class="navbar navbar-custom navbar-expand-md">
-        <div class="container-fluid test">
+        <div class="container-fluid">
           <div class="navbar-header">
             <a class="navbar-brand">Navigation Bar</a>
           </div>
@@ -28,40 +27,28 @@
             <li class="active"><a href="#"></a></li>
             <li class="nav-item"><a href="index.html"> Main Page </a></li>
             <li class="nav-item"><a href="clientNotes.html"> Client Notes </a></li>
-            <li class="nav-item"><a href="aboutUs.html"> About Us </a></li>
-            <li class="nav-item"><a href="turbinesDeployed.html"> Turbine Information </a></li>
-            <li class="dropdown nav-item">
-                    <a class="dropdown-toggle" href="" data-toggle="dropdown">Contact       <span class="caret">         </span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="">Email</a></li>
-                        <li><a href="">Phone List</a></li>
-                        <li><a href="">Live Chat</a></li>
-                    </ul>
-                </li>
             <li class="nav-item"><a href="sites.html"> Sites </a></li>
+            <li class="nav-item"><a href="sensorTimeSeries.html"> All Sensor Data </a></li>
+            <li class="nav-item"><a href="aboutUs.html"> About Us </a></li>
+            <li class="nav-item"><a href="contact.html">Contact</a></li>
           </ul>
         </div>
       </nav>
       <main id="clientVue" class="container-fluid">
 
-
         <div>
-                <table id="notesTable2" class="col-12 table table-striped table-sm">
+                <table style="padding-top 30px" id="notesTable2" class="col-12 table table-striped table-sm">
                   <tr>
                     <thead>
-                    <th role="columnheader">Client ID</th>
                     <th role="columnheader">Client Name</th>
                     <th role="columnheader">Client Description</th>
                     <th role="columnheader">GICS Sector</th>
                     <th role="columnheader">GICS Sub-Industry </th>
                     <th role="columnheader">Headquarters</th>
                     </thead>
-
                   </tr>
                   <tbody id="notesTableBody2" v-for="c in client">
                   <tr>
-                    <td>{{c.clientId}}</td>
                     <td>{{c.clientName}}</td>
                     <td>{{c.clientDescription}}</td>
                     <td>{{c.gicsSector}}</td>
@@ -70,8 +57,12 @@
                   </tr>
                   </tbody>
                 </table>
-              </div>
+        </div>
 
+            <div id="buttons">
+              <a href="graph.html?turbineDeployedId=1" class="button">Turbine 1 KPIs</a>
+              <a href="graph.html?turbineDeployedId=2" class="button">Turbine 2 KPIs</a>
+            </div>
 
       </main>
       <!-- moment.js via CDN-->
