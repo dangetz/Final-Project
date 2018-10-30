@@ -59,6 +59,9 @@ var kpiHeatApp = new Vue({
    legend: {
        enabled:false
    },
+   tooltip: {
+     enabled: false
+   },
    plotOptions: {
        scatter: {
            marker: {
