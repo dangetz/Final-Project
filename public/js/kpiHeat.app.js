@@ -60,7 +60,10 @@ var kpiHeatApp = new Vue({
        enabled:false
    },
    tooltip: {
-     enabled: false
+     enabled: true,
+     formatter: function () {
+       return 'Value is ' + this.y + 'at heat rate' + this.x;
+     },
    },
    plotOptions: {
        scatter: {
