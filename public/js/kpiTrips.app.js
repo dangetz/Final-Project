@@ -34,10 +34,11 @@ var kpiTripsApp = new Vue({
   buildTripsChart() {
     Highcharts.chart('tripsChart', {
         chart: {
+          type: 'bar',
             zoomType: 'x'
         },
         title: {
-            text: 'Output over Time'
+            text: ''
         },
         xAxis: {
             type: 'datetime'
