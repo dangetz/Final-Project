@@ -106,6 +106,7 @@ thead, tfoot {
 
 tbody {
   background-color: rgba(255, 255, 255, 0.55)
+  cursor:pointer;
 }
 
 tbody>tr:hover {
@@ -134,8 +135,4 @@ p{
   color: white;
   text-align: center;
   font-weight: bolder;
-}
-
-li {
-  cursor: pointer;
 }
