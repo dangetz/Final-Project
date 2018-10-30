@@ -35,7 +35,7 @@ var kpiHeatApp = new Vue({
 
       Highcharts.chart('heatChart', {
    chart: {
-       type: 'line',
+       type: 'scatter',
        zoomType: 'xy'
    },
    title: {
@@ -80,6 +80,8 @@ var kpiHeatApp = new Vue({
        }
    },
    series: [{
+       type: 'line',
+       name: 'Regression Line',
        color: 'rgba(223, 83, 83, .5)',
        data: kpiHeatApp.sensorTime.map( entry=>
          [entry.heatRate, entry.output]
