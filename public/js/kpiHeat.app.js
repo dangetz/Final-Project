@@ -35,7 +35,7 @@ var kpiHeatApp = new Vue({
 
       Highcharts.chart('heatChart', {
    chart: {
-       type: 'scatter',
+       type: 'line',
        zoomType: 'xy'
    },
    title: {
