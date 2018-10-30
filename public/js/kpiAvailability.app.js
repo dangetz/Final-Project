@@ -24,7 +24,7 @@ var kpiAvailabilityApp = new Vue({
     formatSensorTime(){
       this.sensorTime.forEach(
         (entry, index, arr) => {
-          entry.dateCollected = Date.parse(entry.dataCollectedDate);
+          entry.dateCollected = Date.parse(entry.dateCollected);
           entry.availability = Number(entry.availability);
         }
       )
@@ -53,7 +53,7 @@ var kpiAvailabilityApp = new Vue({
             type: 'scatter',
             name: 'Observations',
             data: kpiAvailabilityApp.sensorTime.map( entry=>
-              [entry.dataCollectedDate, entry.availability]
+              [entry.dateCollected, entry.availability]
             ),
             marker: {
                 radius: 4
