@@ -21,3 +21,4 @@ require 'models/TurbineDeployed.php';
 require 'models/SensorTimeSeries.php';
 require 'models/Metrics.php';
 require 'models/SiteSpecific.php';
+require 'models/TurbineKpis.php';

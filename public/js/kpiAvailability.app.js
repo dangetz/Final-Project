@@ -42,20 +42,7 @@ var kpiAvailabilityApp = new Vue({
         title: {
             text: 'Scatter plot with regression line'
         },
-        series: [//{
-        //     type: 'line',
-        //     name: 'Regression Line',
-        //     data: [[0, 1.11], [5, 4.51]],
-        //     marker: {
-        //         enabled: false
-        //     },
-        //     states: {
-        //         hover: {
-        //             lineWidth: 0
-        //         }
-        //     },
-        //     enableMouseTracking: false
-        // },
+        series: [
         {
             type: 'scatter',
             name: 'Observations',
