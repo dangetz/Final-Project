@@ -19,6 +19,5 @@ var sensorApp = new Vue({
       console.log(err);
     })
   },
-
   }
 )
