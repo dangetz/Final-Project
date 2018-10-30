@@ -24,7 +24,7 @@ var kpiAvailabilityApp = new Vue({
     formatSensorTime(){
       this.sensorTime.forEach(
         (entry, index, arr) => {
-          entry.dateCollected = Date.parse(entry.dateCollected);
+          entry.dateCollected = Date.parse(entry.dataCollectedDate);
           entry.availability = Number(entry.availability);
         }
       )
