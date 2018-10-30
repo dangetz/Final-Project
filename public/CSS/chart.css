@@ -135,3 +135,7 @@ p{
   text-align: center;
   font-weight: bolder;
 }
+
+li {
+  cursor: pointer;
+}
