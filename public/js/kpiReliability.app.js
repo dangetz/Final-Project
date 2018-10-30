@@ -39,6 +39,12 @@ var kpiReliabilityApp = new Vue({
         yAxis: {
             enabled:true
         },
+        tooltip: {
+          enabled:true,
+          formatter: function () {
+            return 'Reliability rate was ' + this.y + ' ';
+          },
+        },
         title: {
             text: ''
         },
