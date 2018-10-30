@@ -80,8 +80,6 @@ var kpiHeatApp = new Vue({
        }
    },
    series: [{
-       type: 'line',
-       name: 'Regression Line',
        color: 'rgba(223, 83, 83, .5)',
        data: kpiHeatApp.sensorTime.map( entry=>
          [entry.heatRate, entry.output]
