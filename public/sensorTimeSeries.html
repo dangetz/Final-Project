@@ -46,12 +46,10 @@
       <table id="notesTable2" class="col-12 table table-striped table-sm">
         <tr>
           <thead>
-            <th role="columnheader">Turbine Deployed ID</th>
             <th role="columnheader">Turbine Name</th>
             <th role="columnheader">Turbine Serial Number</th>
             <th role="columnheader">Sensor Name</th>
             <th role="columnheader">Sensor Serial Number</th>
-            <th role="columnheader">Sensor Deployed ID</th>
             <th role="columnheader">Data Collected Date</th>
             <th role="columnheader">Output</th>
             <th role="columnheader">Heat Rate</th>
@@ -66,12 +64,10 @@
         </tr>
         <tbody id="notesTableBody2" v-for="c in sensorData">
           <tr>
-            <td>{{c.turbineDeployedId}}</td>
             <td>{{c.turbineName}}</td>
             <td>{{c.turbineSerialNumber}}</td>
             <td>{{c.sensorName}}</td>
             <td>{{c.sensorSerialNumber}}</td>
-            <td>{{c.sensorDeployedId}}</td>
             <td>{{c.dataCollectedDate}}</td>
             <td>{{c.output}}</td>
             <td>{{c.heatRate}}</td>
