@@ -30,7 +30,6 @@ var kpiHeatApp = new Vue({
       )
     },
 
-    //Output Chart
     buildHeatChart() {
 
       Highcharts.chart('heatChart', {

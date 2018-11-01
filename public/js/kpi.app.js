@@ -31,7 +31,6 @@ var kpiApp = new Vue({
       )
     },
 
-    //Output Chart
     buildOutputChart() {
 
        Highcharts.chart('outputChart', {
@@ -92,7 +91,6 @@ var kpiApp = new Vue({
 
   created () {
 
-    // Do data fetch
     const url = new URL(window.location.href);
     const turbineDeployedId = url.searchParams.get('turbineDeployedId');
     console.log('Turbine: '+ turbineDeployedId);

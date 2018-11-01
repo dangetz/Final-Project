@@ -30,14 +30,7 @@ var kpiCompressorApp = new Vue({
       )
     },
 
-
-
-    //Output Chart
     buildCompressorChart() {
-      //var dataArray = [];
-
-    //  kpiCompressorApp.sensorTime.map( entry=>
-      //  [entry.dateCollected, entry.compressorEfficiency]
 
        Highcharts.chart('compressorChart', {
            chart: {
@@ -97,7 +90,6 @@ var kpiCompressorApp = new Vue({
 
   created () {
 
-    // Do data fetch
     const url = new URL(window.location.href);
     const turbineDeployedId = url.searchParams.get('turbineDeployedId');
     console.log(this.sensorTime);
